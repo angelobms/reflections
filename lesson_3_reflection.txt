@@ -11,7 +11,13 @@ A: Performing the pull manually causes me to have a mair control over what I am 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-A:
+A: Fork - Clone from a remote repository to your repository on GitHub.
+Clone - Clone your repository in GitHub for location.
+Branche - Branch within the local repository itself.
+
+The Fork user happens when we want to work in a repository without changing its original files. Then a copy of the repository is made in github.
+The Clone user is when we want to clone a GitHub repository to work locally.
+The Branche user happens to need to work in the local repository for bug fixes.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
