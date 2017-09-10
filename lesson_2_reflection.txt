@@ -1,21 +1,50 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-Quando é inicializado um repositório o mesmo não possui nenhum commit, podeden ser verificado através do comando git log. 
-Ao realizar o comando git status verificasse que que possui arquivos que não foram adicionando ao repósitórios.
+A: When a repository is started it does not have any commit, it can be verified through the git log command.
+When performing the git status command check that you have files that were not adding to the refactories.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
+A: The staging area contains the file or (logically-related) files that are ready to be committed (for tracking) to the git repository. The working directory contains all the files -- those about to be committed and those that are not yet ready for committing to the repository of the project.
+
 How can you use the staging area to make sure you have one commit per logical
 change?
+
+A: You can use it to only commit files that have had logical changes made to them and omit the files that do not.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+A: When you want different versions with different features, introduce some
+experimental issues, particularities for different languages, OS, devices,  etc.
+
 How do the diagrams help you visualize the branch structure?
+
+A: This makes it clear where to find specific changes.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+A: Merging two branches together results in the combining of all the appropriate changes into one single master branch node.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+A: C - Automatic merging does not work all the time. There are situations where the conflicting revisions may be present in at least one file in the branches that are about to be merged. 
+P - It simplifies the process of merging branches. 
+
+Commands:
+
+git add --> Add a file to the staging area
+git commit --> Commit the files from the staging area to the repository 
+git status --> Show which files are in the staging area, and which files from the working directory are not part of the repository    
+git diff --> Git diff without arguments is comparing the working directory with the staging area
+git diff --staged --> Compare the staging area with the repository
+git reset --hard --> Undo all changes! There is no rollback for this, so be carefull!
+git checkout master --> Restore the "Head" to the latest check-in (this will be part of a later lesson/module)
+git log --graph --oneline <branch1> <branch2> --> Show a visual representation of the commit history within different branches
+git checkout -b new_branch_name --> Creates a new branch and do a checkout on this branch in one call instead of git branch new_branch_name and git checkout new_branch_name
+git merge branch1 branch2 --> Merge two branches, branch2 get merged into branch1
+git branch -d name --> Remove the branch with the specified name
+git show commitId --> Show the changes made in this commit compared to the previous version. This is working even after merging.
