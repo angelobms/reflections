@@ -1,0 +1,46 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+A: Only changes where shown and a change caused the bug
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+A: You have a track of all your ideas, doubts and improvements.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+A:
+C - lost files when they happen application failure, computer or even when power.
+P - The number of saved versions can be kept at what you really need. Making it easy to analyze because of the minimal amount of files to read.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+A: Git stores a compressed version of the entire project file structure. It treats the entire file structure as a single project and the files are usually interrelated with each other. Already Google Docs is a single document as the "project" itself.
+
+How can you use the commands git log and git diff to view the history of files?
+
+A: git log is used to find the different 'commits' or historical states of the project and their IDs. git diff is used to compare those historical states as identified by those IDs. 
+
+
+How might using version control make you more confident to make changes that
+could break something?
+
+A: Go back and restore it to an earlier state, compare the different states.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+A: Source code for my projects.
+
+Commands:
+
+q |    exit git log!
+git log  |    List the commits and show which files have changed
+git log --stat  |    Show addition information about the commits
+git diff id1 id2  |    Compare two commits
+git clone  |    Create a local copy/clone from the repository
+git config --global color.ui auto |    get colored diff output
+git checkout | Shows a previous version of the file. This is not a checkout to edit like in SVN or TFS!
